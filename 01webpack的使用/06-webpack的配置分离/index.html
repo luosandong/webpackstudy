@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Webpack Less-Loader</title>
+</head>
+
+<body>
+    <h1>Webpack的Less-Loader</h1>
+    <ol>
+        <li>npm install webpack --save-dev </li>
+        <li>npm init (设置项目信息) </li>
+        <li>npm install --save-dev css-loader </li>
+        <li>npm install --save-dev style-loader </li>
+        <li>npm install --save-dev less-loader </li>
+        <li>npm install --save-dev less </li>
+        <li>新建webpack.config.js 进行webpack的配置</li>
+        <li>配置npm的任务</li>
+    </ol>
+
+    <p>
+        <code>
+            const path = require('path')
+            module.exports = {
+            entry: 'main.js',
+            output: {
+            path: path.resolve(__dirname, 'dist'),
+            filename: 'bundle.js'
+            },
+            module: {
+            rules: [{
+            test: /\.css$/,
+            use: ["style-loader", "css-loader"]
+            }]
+            }
+            }
+        </code>
+    </p>
+
+    <div id="app">
+
+    </div>
+
+</body>
+
+</html>
